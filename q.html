@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<body>
+
+    <script>
+        let num = parseInt(prompt("Enter a number: "));
+        let reversedNum = 0;
+        while (num !== 0) {
+            let digit = num % 10;
+            reversedNum = reversedNum * 10 + digit;
+            num = Math.floor(num / 10);
+        }
+        document.write("The reversed number is " + reversedNum);
+    </script>
+</body>
+</html>
+
+<!doctype html>
+<html>
+<body>
+
+    <script>
+        let num = parseInt(prompt("Enter a number: "));
+        let reversedNum = parseInt(num.toString().split('').reverse().join(''));
+        document.write("The reversed number is " + reversedNum);
+    </script>
+</body>
+</html>
