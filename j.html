@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Registration Form</title>
+<title>Registration Form</title>
 </head>
 <body>
 
-  <h2>Registration Form</h2>
+  <h1>Register</h1>
 
-  <form>
-    <label for="fname">First Name:</label><br>
-    <input type="text" id="fname" name="fname"><br><br>
+  <form action="/register" method="post">
 
-    <label for="lname">Last Name:</label><br>
-    <input type="text" id="lname" name="lname"><br><br>
+    <input type="text" id="username" name="username" required><br><br>
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email"><br><br>
+    <input type="email" id="email" name="email" required><br><br>
 
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password"><br><br>
+    <input type="password" id="password" name="password" required><br><br>
 
-    <label for="gender">Gender:</label><br>
-    <input type="radio" id="male" name="gender" value="Male"> Male<br>
-    <input type="radio" id="female" name="gender" value="Female"> Female<br><br>
+    <input type="password" id="confirm_password" name="confirm_password" required><br><br>
 
-    <label for="dob">Date of Birth:</label><br>
-    <input type="date" id="dob" name="dob"><br><br>
 
-    <label for="country">Country:</label><br>
-    <select id="country" name="country">
-      <option value="India">India</option>
-      <option value="USA">USA</option>
-      <option value="UK">UK</option>
-      <option value="Other">Other</option>
+    <input type="radio" id="male" name="gender" value="male">
+
+    <input type="radio" id="female" name="gender" value="female">
+
+    <input type="radio" id="other" name="gender" value="other">
+
+
+
+    <textarea id="address" name="address" rows="4" cols="50"></textarea><br><br>
+
+    <select id="course" name="course">
+      <option value="computer_science">Computer Science</option>
+      <option value="data_science">Data Science</option>
+      <option value="software_engineering">Software Engineering</option>
+      <option value="web_development">Web Development</option>
     </select><br><br>
 
-    <label for="terms">
-      <input type="checkbox" id="terms" name="terms"> I agree to the terms and conditions
-    </label><br><br>
+
+    <input type="checkbox" id="reading" name="hobbies[]" value="reading">
+
+    <input type="checkbox" id="gaming" name="hobbies[]" value="gaming">
+
+    <input type="checkbox" id="hiking" name="hobbies[]" value="hiking">
+
+    <input type="checkbox" id="cooking" name="hobbies[]" value="cooking">
+
 
     <input type="submit" value="Register">
-    <input type="reset" value="Clear">
   </form>
 
 </body>
